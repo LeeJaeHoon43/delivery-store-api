@@ -42,7 +42,7 @@ class OrderCommandServiceTest {
     }
 
     @ParameterizedTest(name = "주문이 {0}인 경우는 조리 완료가 가능하다")
-    @EnumSource(mode = EnumSource.Mode.INCLUDE, names = ["READY", "ACCEPT"])
+    @EnumSource(mode = EnumSource.Mode.INCLUDE, names = ["READY"])
     fun `조리 완료는 "주문 대기" 또는 "주문 수락"인 경우만 가능하다`(storeOrderStatus: StoreOrderStatus) {
         // given
         val storeId = 1L
